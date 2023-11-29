@@ -30,7 +30,7 @@ const Home = () => {
     };
 
     fetchData();
-  }, [access]);
+  }, [access, isLogin]);
 
   return (
     <HomeContainer>

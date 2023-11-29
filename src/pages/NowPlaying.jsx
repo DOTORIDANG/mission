@@ -42,7 +42,7 @@ export default function NowPlaying() {
   useEffect(() => {
     setLoading(true);
     fetchData(page).then(() => setLoading(false));
-  }, []);
+  }, [page]);
 
   const handleScroll = () => {
     const scrollHeight = document.documentElement.scrollHeight - 50;
@@ -66,6 +66,7 @@ export default function NowPlaying() {
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
